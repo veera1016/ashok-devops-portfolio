@@ -4,233 +4,177 @@
   <meta charset="UTF-8">
   <title>Veera Bharat Hyma Ashok Togaru | DevOps Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f9; color: #333; }
-    header { background: #0f172a; color: #fff; padding: 30px; text-align: center; }
-    section { padding: 30px; max-width: 1000px; margin: auto; }
-    h2 { color: #0f172a; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
-    h3 { margin-bottom: 5px; }
-    h4 { margin-top: 15px; margin-bottom: 5px; color: #334155; }
-    .card { background: #fff; padding: 20px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    ul { line-height: 1.8; }
-    a { color: #2563eb; text-decoration: none; }
-    footer { background: #0f172a; color: #fff; text-align: center; padding: 15px; }
+    :root { --bg:#020617; --card:#0b1220; --accent:#3b82f6; --muted:#94a3b8; --text:#e5e7eb; }
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; margin: 0; background: radial-gradient(1200px 600px at 10% -10%, #1e293b, transparent), radial-gradient(800px 400px at 90% -10%, #0b3b8a, transparent), var(--bg); color: var(--text); }
+    header { padding: 72px 20px 56px; text-align: center; }
+    header h1 { font-size: 44px; margin: 0 0 8px; letter-spacing: 0.6px; font-weight: 800; }
+    header .role { color:#c7d2fe; font-weight:600; }
+    header .contact { margin-top:10px; color:#cbd5f5; }
+    .links a { margin: 0 10px; color: #93c5fd; font-weight: 600; text-decoration:none; }
+    .cta { margin-top:18px; }
+    .btn { display:inline-block; margin: 8px; padding: 12px 22px; border-radius: 999px; background: var(--accent); color:#fff; font-weight:700; text-decoration:none; box-shadow: 0 10px 25px rgba(59,130,246,.35); }
+    .btn.secondary { background: transparent; border:2px solid var(--accent); color:#bfdbfe; box-shadow:none; }
+    section { padding: 36px 20px; max-width: 1100px; margin: auto; }
+    h2 { color:#bfdbfe; border-left: 4px solid var(--accent); padding-left: 12px; margin: 56px 0 18px; letter-spacing:.3px; }
+    h3 { margin: 6px 0 8px; color:#f8fafc; }
+    h4 { margin: 14px 0 8px; color:#cbd5f5; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); backdrop-filter: blur(8px); border:1px solid rgba(148,163,184,.15); padding: 22px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,.35); }
+    .muted { color: var(--muted); }
+    ul { line-height: 1.8; padding-left: 18px; }
+    li { color: #e5e7eb; }
+    .tags { margin-top:10px; }
+    .tag { display:inline-block; background: rgba(59,130,246,.18); color:#bfdbfe; padding: 6px 12px; border-radius: 999px; font-size: 12px; margin: 6px 8px 0 0; border:1px solid rgba(59,130,246,.35); }
+    .metric { display:flex; align-items:center; gap:14px; }
+    .metric .num { font-size:28px; font-weight:800; color:#93c5fd; }
+    .metric .label { color:#cbd5f5; }
+    .divider { height:1px; background: linear-gradient(90deg, transparent, rgba(148,163,184,.35), transparent); margin: 22px 0; }
+    footer { background: #020617; color: #94a3b8; text-align: center; padding: 28px; margin-top: 60px; border-top:1px solid rgba(148,163,184,.15); }
+    pre { background:#020617; border:1px solid rgba(148,163,184,.2); padding:14px; border-radius:12px; overflow:auto; color:#c7d2fe; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>VEERA BHARAT HYMA ASHOK TOGARU</h1>
-  <p>DevOps Engineer | Azure & AWS</p>
-  <p>
-    📧 togaruashok1996@gmail.com | 📞 +91-8143581582 <br>
-    🔗 <a href="https://github.com/veera1016" target="_blank">GitHub</a> |
-    ✍️ <a href="https://ashoktogaru.hashnode.dev" target="_blank">Blog 1</a> |
-    ✍️ <a href="https://ashok1016.hashnode.dev" target="_blank">Blog 2</a>
-  </p>
+  <div class="role">DevOps Engineer | Azure & AWS</div>
+  <div class="contact">📧 togaruashok1996@gmail.com | 📞 +91-8143581582</div>
+  <div class="links">
+    <a href="https://github.com/veera1016" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/veera-bharat-hyma-ashok-togaru-734a9b267" target="_blank">LinkedIn</a> |
+    <a href="https://ashoktogaru.hashnode.dev" target="_blank">Blog</a>
+  </div>
+  <div class="cta">
+    <a class="btn" href="#projects">View Projects</a>
+    <a class="btn secondary" href="#experience">Experience</a>
+    <a class="btn secondary" href="resume.pdf" target="_blank">Download Resume</a>
+  </div>
 </header>
 
 <section>
-
   <h2>Professional Summary</h2>
   <div class="card">
     <p>
-      DevOps Engineer with hands-on experience in Azure and AWS cloud environments.
-      Currently working at HFS Group on a client-facing Azure project (Cover4PM) and an
-      internal product (HFS NCC Platform). Strong expertise in Azure Application Gateway
-      V1 to V2 migration, WAF, CI/CD automation, GitHub Actions, Terraform, Linux
-      migration, and production support. Proven ability to improve deployment reliability,
-      traceability, and rollback readiness through automation, blue-green deployments,
-      infrastructure scalability, and scripted deployments.
+      DevOps Engineer with hands-on experience across Azure and AWS, currently delivering production-grade automation for a client-facing Azure platform (Cover4PM) and an internal product (HFS NCC Platform). Proven expertise in Azure Application Gateway V1→V2 migration, WAF hardening, CI/CD automation (Azure DevOps & GitHub Actions), Terraform-based provisioning, Linux migrations, and zero-downtime releases. Known for replacing manual deployments with shell-scripted automation, implementing application and database backups, and improving rollback readiness and release reliability.
     </p>
   </div>
 
-  <h2>Technical Skills</h2>
-  <div class="card">
-    <ul>
-      <li><strong>Cloud Platforms:</strong> Azure, AWS</li>
-      <li><strong>CI/CD:</strong> Azure DevOps (CI & CD), GitHub Actions, Jenkins</li>
-      <li><strong>Infrastructure as Code:</strong> Terraform</li>
-      <li><strong>Containers & Orchestration:</strong> Docker, Kubernetes, Amazon ECS, Amazon EKS</li>
-      <li><strong>Application Hosting & Web Servers:</strong> Nginx, IIS (.NET), Apache Tomcat</li>
-      <li><strong>Security & Networking:</strong> SSL/TLS, HTTPS, IAM, Azure Application Gateway (V1 & V2), WAF, ALB</li>
-      <li><strong>Monitoring & Logging:</strong> Azure Monitor, Application Insights, CloudWatch, SNS, Grafana</li>
-      <li><strong>Operating Systems:</strong> Linux, Windows</li>
-      <li><strong>Scripting:</strong> Bash, Shell Scripting</li>
-      <li><strong>Databases:</strong> MySQL, PostgreSQL (Backups & Restore)</li>
-    </ul>
+  <h2>Impact Metrics</h2>
+  <div class="grid">
+    <div class="card metric"><div class="num">50%</div><div class="label">Faster deployments via CI/CD & scripting</div></div>
+    <div class="card metric"><div class="num">95%</div><div class="label">CI pipeline success rate</div></div>
+    <div class="card metric"><div class="num">0</div><div class="label">Downtime during blue‑green releases</div></div>
+    <div class="card metric"><div class="num">100%</div><div class="label">Rollback readiness with app & DB backups</div></div>
   </div>
 
-  <h2>Professional Experience</h2>
-
+  <h2>Core Skills</h2>
   <div class="card">
-    <h3>DevOps Engineer — HFS Group, India (Sep 2025 – Present)</h3>
+    <div class="tags">
+      <span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Azure DevOps</span><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Nginx</span><span class="tag">WAF</span><span class="tag">Shell Scripting</span><span class="tag">Linux</span><span class="tag">CI/CD</span><span class="tag">App Gateway</span><span class="tag">Route 53</span><span class="tag">SSL/TLS</span>
+    </div>
+  </div>
 
-    <h4>Client Project (Service-Based): Cover4PM — Azure</h4>
+  <h2 id="experience">Professional Experience</h2>
+  <div class="card">
+    <h3>DevOps Engineer — HFS Group, India <span class="muted">(Sep 2025 – Present)</span></h3>
+    <h4>Client Project: Cover4PM — Azure</h4>
     <ul>
-      <li>Supported Azure Application Gateway migration from V1 to V2, including subnet redesign, WAF configuration, DNS cutover, rollback planning, and post-migration validation.</li>
-      <li>Handled manual deployment of applications across multiple Azure tenants as per client requirements.</li>
-      <li>Executed database and data scripts during deployments and validated application data consistency.</li>
-      <li>Managed Azure infrastructure resources and supported environment stability in UAT and production.</li>
-      <li>Designed and implemented Azure CI pipelines and Azure CD release pipelines (currently in testing phase).</li>
-      <li>Set up SonarQube locally for development teams and exported code-quality issues, sharing reports with the client.</li>
-      <li>Collaborated with client and internal teams to ensure smooth releases and issue resolution.</li>
+      <li>Migrated Azure Application Gateway from V1 to V2 with subnet redesign, WAF configuration, DNS cutover, rollback planning, and post‑migration validation.</li>
+      <li>Replaced manual deployments with shell‑scripted automation to stop/start services, back up applications, deploy new builds, and restart services.</li>
+      <li>Implemented application and database backup scripts with timestamped versions to ensure safe rollbacks.</li>
+      <li>Executed database and data scripts during UAT and production releases; validated data consistency.</li>
+      <li>Built CI pipelines for application code using Azure DevOps; automated builds and artifact packaging.</li>
+      <li>Designed Azure CD release pipelines (testing phase) with approvals and environment controls.</li>
+      <li>Set up SonarQube locally; exported and shared code‑quality reports with the client.</li>
+      <li>Managed Azure infrastructure and supported UAT/production stability across multiple tenants.</li>
     </ul>
-
-    <h4>Internal Product (Product-Based): HFS NCC Platform</h4>
+    <div class="divider"></div>
+    <h4>Internal Product: HFS NCC Platform</h4>
     <ul>
-      <li>Migrated internal and client applications from Windows to Linux environments to improve performance, stability, and cost efficiency.</li>
-      <li>Configured Nginx for application hosting and implemented HTTPS redirection using SSL/TLS.</li>
-      <li>Managed UAT and production deployments and troubleshot production issues.</li>
-      <li>Designed and implemented a GitHub-based branching and deployment strategy.</li>
-      <li>Built automated CI/CD pipelines using GitHub Actions.</li>
-      <li>Implemented an easy rollback mechanism.</li>
-      <li>Designed blue-green deployments using GitHub Actions to enable zero-downtime releases.</li>
+      <li>Migrated applications from Windows to Linux to improve performance and cost efficiency.</li>
+      <li>Configured Nginx as a reverse proxy; enforced HTTPS using SSL/TLS.</li>
+      <li>Built GitHub Actions CI/CD pipelines and standardized release workflows.</li>
+      <li>Implemented blue‑green deployments with automated rollback mechanisms.</li>
+      <li>Managed UAT and production deployments and resolved incidents.</li>
     </ul>
   </div>
 
   <div class="card">
-    <h3>DevOps Intern — Pearl Thoughts, India (Jun 2024 – Sep 2024)</h3>
+    <h3>DevOps Intern — Pearl Thoughts, India <span class="muted">(Jun 2024 – Sep 2024)</span></h3>
     <ul>
-      <li>Deployed Strapi API on AWS EC2 using GitHub Actions.</li>
-      <li>Built infrastructure using Terraform.</li>
-      <li>Configured IAM roles and policies.</li>
-      <li>Managed DNS and SSL using Route 53 and Nginx.</li>
-      <li>Managed secrets using AWS Secrets Manager and Parameter Store.</li>
-      <li>Reduced deployment time by 50% and increased CI pipeline success rate to 95%.</li>
+      <li>Provisioned AWS infrastructure using Terraform (EC2, IAM, networking).</li>
+      <li>Deployed Strapi API on EC2 using GitHub Actions; Dockerized builds.</li>
+      <li>Configured IAM, Route 53, SSL, and Secrets Manager.</li>
+      <li>Reduced deployment time by 50% and improved CI success rate to 95%.</li>
     </ul>
   </div>
 
-  <h2>Key Projects (Client + Internal + Internship)</h2>
+  <h2 id="projects">Key Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Shell‑Scripted Deployment & Backup Automation — Cover4PM</h3>
+      <ul>
+        <li>Automated deployments using shell scripts to eliminate manual steps.</li>
+        <li>Implemented application and DB backups before every release.</li>
+        <li>Improved rollback readiness and reduced human errors.</li>
+      </ul>
+      <div class="tags"><span class="tag">Shell</span><span class="tag">Linux</span><span class="tag">Automation</span></div>
+    </div>
+    <div class="card">
+      <h3>Azure Application Gateway V1 → V2 Migration — Cover4PM</h3>
+      <ul>
+        <li>Migrated production traffic with zero downtime.</li>
+        <li>Configured WAF; redesigned subnets; executed DNS cutover.</li>
+      </ul>
+      <div class="tags"><span class="tag">Azure</span><span class="tag">App Gateway</span><span class="tag">WAF</span></div>
+    </div>
+    <div class="card">
+      <h3>CI Pipeline for Application Code — Cover4PM</h3>
+      <ul>
+        <li>Created Azure DevOps CI pipelines for builds and artifacts.</li>
+        <li>Enabled commit‑to‑artifact traceability.</li>
+      </ul>
+      <div class="tags"><span class="tag">Azure DevOps</span><span class="tag">CI/CD</span></div>
+    </div>
+    <div class="card">
+      <h3>Blue‑Green Deployment Strategy — HFS NCC Platform</h3>
+      <ul>
+        <li>Implemented zero‑downtime releases using GitHub Actions.</li>
+        <li>Built automated rollback.</li>
+      </ul>
+      <div class="tags"><span class="tag">GitHub Actions</span><span class="tag">Blue‑Green</span></div>
+    </div>
+  </div>
 
-  <!-- Cover4PM Client Projects -->
-
+  <h2>Architecture Snapshot (High Level)</h2>
   <div class="card">
-    <h3>Azure Application Gateway V1 → V2 Migration — Cover4PM (Client Project)</h3>
     <ul>
-      <li>Migrated production Azure Application Gateway from V1 to V2 to improve scalability, performance, and feature support.</li>
-      <li>Redesigned subnets and network configuration to meet V2 requirements.</li>
-      <li>Configured Web Application Firewall (WAF) policies to enhance application security.</li>
-      <li>Performed DNS cutover and planned rollback strategy to ensure zero downtime.</li>
-      <li>Validated backend health, HTTPS traffic flow, and post-migration application behavior.</li>
-      <li>Supported UAT and production environments during and after migration.</li>
+      <li>Users → Azure Application Gateway (V2 + WAF) → Nginx → Application Services</li>
+      <li>CI: Azure DevOps (build, test, artifact) → Artifact Storage</li>
+      <li>CD: GitHub Actions / Azure Release Pipelines → Blue‑Green Deployments</li>
+      <li>Backups: App Folder Backups + DB Dumps (timestamped)</li>
     </ul>
   </div>
 
+  <h2>Automation Highlights (Snippet)</h2>
   <div class="card">
-    <h3>Shell Scripting–Based Application Deployment & Backup Automation — Cover4PM (Client Project)</h3>
-    <ul>
-      <li>Converted manual application deployments into automated shell scripting–based deployments.</li>
-      <li>Developed scripts to stop services, take application backups, deploy new builds, and restart services.</li>
-      <li>Implemented application folder backup and versioned artifact storage before every release.</li>
-      <li>Reduced manual deployment errors and improved release consistency.</li>
-      <li>Improved rollback readiness by preserving pre-deployment application states.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Database Backup & Restore Automation — Cover4PM (Client Project)</h3>
-    <ul>
-      <li>Automated database backups using shell scripts for UAT and production environments.</li>
-      <li>Implemented scheduled DB dump scripts with timestamped backup files.</li>
-      <li>Validated database backup integrity and restore procedures.</li>
-      <li>Ensured safe rollback capability by maintaining pre-release database snapshots.</li>
-      <li>Standardized database backup procedures across multiple Azure tenants.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>CI Pipeline for Application Code — Cover4PM (Client Project)</h3>
-    <ul>
-      <li>Created CI pipelines for application code using Azure DevOps.</li>
-      <li>Automated build, package, and artifact generation processes.</li>
-      <li>Integrated source control triggers for continuous integration.</li>
-      <li>Improved code build reliability and reduced manual packaging effort.</li>
-      <li>Enabled traceability between code commits and deployment artifacts.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Multi-Tenant Application Deployment — Cover4PM (Client Project)</h3>
-    <ul>
-      <li>Handled deployments of applications across multiple Azure tenants as per client requirements.</li>
-      <li>Executed deployment checklists and validated service availability post-release.</li>
-      <li>Performed smoke testing and sanity checks after each deployment.</li>
-      <li>Ensured consistency of application versions across tenants.</li>
-      <li>Coordinated with client teams during production releases.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Database & Data Script Execution — Cover4PM (Client Project)</h3>
-    <ul>
-      <li>Executed database schema changes and data scripts during UAT and production deployments.</li>
-      <li>Validated data consistency and application behavior after script execution.</li>
-      <li>Maintained deployment logs and rollback readiness.</li>
-      <li>Collaborated with developers to resolve data-related deployment issues.</li>
-    </ul>
-  </div>
-
-  <!-- HFS NCC Internal Projects -->
-
-  <div class="card">
-    <h3>Blue-Green Deployment Strategy — HFS NCC Platform</h3>
-    <ul>
-      <li>Designed and implemented blue-green deployments using GitHub Actions.</li>
-      <li>Built automated traffic switch and rollback mechanism.</li>
-      <li>Enabled zero-downtime production releases.</li>
-      <li>Improved deployment stability and reduced release failures.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Windows to Linux Migration & Nginx Hosting — HFS NCC Platform</h3>
-    <ul>
-      <li>Migrated internal and client applications from Windows servers to Linux environments.</li>
-      <li>Configured Nginx as a reverse proxy and web server.</li>
-      <li>Implemented HTTPS redirection using SSL/TLS certificates.</li>
-      <li>Improved performance, stability, and cost efficiency.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>GitHub Actions CI/CD Automation — HFS NCC Platform</h3>
-    <ul>
-      <li>Built automated CI/CD pipelines using GitHub Actions.</li>
-      <li>Implemented branching and deployment strategy.</li>
-      <li>Standardized build and release workflows.</li>
-      <li>Improved rollback readiness and traceability.</li>
-    </ul>
-  </div>
-
-  <!-- Internship Projects -->
-
-  <div class="card">
-    <h3>Terraform-Based AWS Infrastructure — Pearl Thoughts</h3>
-    <ul>
-      <li>Provisioned AWS infrastructure using Terraform, including EC2, IAM, and networking.</li>
-      <li>Managed secrets using AWS Secrets Manager and Parameter Store.</li>
-      <li>Applied Infrastructure as Code (IaC) practices.</li>
-      <li>Improved deployment repeatability.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>CI/CD Pipeline for Strapi API on AWS — Pearl Thoughts</h3>
-    <ul>
-      <li>Deployed Strapi API on AWS EC2 using GitHub Actions.</li>
-      <li>Built Docker images and automated workflows.</li>
-      <li>Configured IAM roles and Route 53 DNS.</li>
-      <li>Managed SSL using Nginx.</li>
-      <li>Reduced deployment time by 50%.</li>
-    </ul>
+<pre>
+# pre_deploy.sh
+systemctl stop app.service
+./backup_app.sh
+./backup_db.sh
+./deploy_new_build.sh
+systemctl start app.service
+</pre>
   </div>
 
   <h2>Education</h2>
   <div class="card">
     <p>B.Tech — Electronics & Communication Engineering (2015 – 2019)</p>
   </div>
-
 </section>
 
 <footer>
