@@ -15,8 +15,9 @@
     header .contact { margin-top:10px; color:#cbd5f5; }
     .links a { margin: 0 10px; color: #93c5fd; font-weight: 600; text-decoration:none; }
     .cta { margin-top:18px; }
-    .btn { display:inline-block; margin: 8px; padding: 12px 22px; border-radius: 999px; background: var(--accent); color:#fff; font-weight:700; text-decoration:none; box-shadow: 0 10px 25px rgba(59,130,246,.35); cursor:pointer; }
-    .btn.secondary { background: transparent; border:2px solid var(--accent); color:#bfdbfe; box-shadow:none; }
+    .btn { display:inline-block; margin: 8px; padding: 12px 22px; border-radius: 999px; background: transparent; border:2px solid var(--accent); color:#bfdbfe; font-weight:700; text-decoration:none; box-shadow:none; cursor:pointer; transition: all .25s ease; }
+    .btn.primary { background: var(--accent); color:#fff; box-shadow: 0 10px 25px rgba(59,130,246,.35); }
+    .btn.active { background: var(--accent); color:#fff; box-shadow: 0 10px 25px rgba(59,130,246,.45); transform: translateY(-1px); }
     section { padding: 36px 20px; max-width: 1100px; margin: auto; }
     h2 { color:#bfdbfe; border-left: 4px solid var(--accent); padding-left: 12px; margin: 56px 0 18px; letter-spacing:.3px; }
     h3 { margin: 6px 0 8px; color:#f8fafc; }
@@ -33,15 +34,20 @@
     .metric .label { color:#cbd5f5; }
     .divider { height:1px; background: linear-gradient(90deg, transparent, rgba(148,163,184,.35), transparent); margin: 22px 0; }
     footer { background: #020617; color: #94a3b8; text-align: center; padding: 28px; margin-top: 60px; border-top:1px solid rgba(148,163,184,.15); }
-    pre { background:#020617; border:1px solid rgba(148,163,184,.2); padding:14px; border-radius:12px; overflow:auto; color:#c7d2fe; }
   </style>
   <script>
-    function showSection(id) {
+    function setActive(btnId, sectionId) {
       const sections = ['summary','experience','projects'];
       sections.forEach(sec => {
-        document.getElementById(sec).style.display = (sec === id) ? 'block' : 'none';
+        document.getElementById(sec).style.display = (sec === sectionId) ? 'block' : 'none';
       });
-      window.scrollTo({ top: document.getElementById(id).offsetTop - 20, behavior: 'smooth' });
+      const buttons = ['btn-home','btn-exp','btn-proj'];
+      buttons.forEach(b => document.getElementById(b).classList.remove('active'));
+      document.getElementById(btnId).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.onload = function() {
+      setActive('btn-home','summary');
     }
   </script>
 </head>
@@ -53,14 +59,13 @@
   <div class="contact">📧 togaruashok1996@gmail.com | 📞 +91-8143581582</div>
   <div class="links">
     <a href="https://github.com/veera1016" target="_blank">GitHub</a> |
-    <a href="https://www.linkedin.com/in/veera-bharat-hyma-ashok-togaru-734a9b267" target="_blank">LinkedIn</a> |
     <a href="https://ashoktogaru.hashnode.dev" target="_blank">Blog</a>
   </div>
   <div class="cta">
-    <span class="btn" onclick="showSection('summary')">Home</span>
-    <span class="btn secondary" onclick="showSection('experience')">Experience</span>
-    <span class="btn secondary" onclick="showSection('projects')">Projects</span>
-    <a class="btn secondary" href="resume.pdf" download="Ashok_Togaru_DevOps_Resume.pdf">Download Resume</a>
+    <span id="btn-home" class="btn primary active" onclick="setActive('btn-home','summary')">Home</span>
+    <span id="btn-exp" class="btn" onclick="setActive('btn-exp','experience')">Experience</span>
+    <span id="btn-proj" class="btn" onclick="setActive('btn-proj','projects')">Projects</span>
+    <a class="btn" href="resume.pdf" download="Ashok_Togaru_DevOps_Resume.pdf">Download Resume</a>
   </div>
 </header>
 
